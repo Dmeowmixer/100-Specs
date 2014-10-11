@@ -45,6 +45,26 @@ var HundredSpecs = function() {
 	js.mocha.M.describe("Step 77",$bind(this,this.step77));
 	js.mocha.M.describe("Step 78",$bind(this,this.step78));
 	js.mocha.M.describe("Step 79",$bind(this,this.step79));
+	js.mocha.M.describe("Step 81",$bind(this,this.step81));
+	js.mocha.M.describe("Step 82",$bind(this,this.step82));
+	js.mocha.M.describe("Step 83",$bind(this,this.step83));
+	js.mocha.M.describe("Step 84",$bind(this,this.step84));
+	js.mocha.M.describe("Step 85",$bind(this,this.step85));
+	js.mocha.M.describe("Step 86",$bind(this,this.step86));
+	js.mocha.M.describe("Step 87",$bind(this,this.step87));
+	js.mocha.M.describe("Step 88",$bind(this,this.step88));
+	js.mocha.M.describe("Step 89",$bind(this,this.step89));
+	js.mocha.M.describe("Step 90",$bind(this,this.step90));
+	js.mocha.M.describe("Step 91",$bind(this,this.step91));
+	js.mocha.M.describe("Step 92",$bind(this,this.step92));
+	js.mocha.M.describe("Step 93",$bind(this,this.step93));
+	js.mocha.M.describe("Step 94",$bind(this,this.step94));
+	js.mocha.M.describe("Step 95",$bind(this,this.step95));
+	js.mocha.M.describe("Step 96",$bind(this,this.step96));
+	js.mocha.M.describe("Step 97",$bind(this,this.step97));
+	js.mocha.M.describe("Step 98",$bind(this,this.step98));
+	js.mocha.M.describe("Step 99",$bind(this,this.step99));
+	js.mocha.M.describe("Step 100",$bind(this,this.step100));
 };
 HundredSpecs.__name__ = true;
 HundredSpecs.main = function() {
@@ -65,7 +85,7 @@ HundredSpecs.prototype = {
 	}
 	,step3: function() {
 		js.mocha.M.it("should declare a variable named 'sahara_animal' with a value of 'The Addax'.",function() {
-			js.expect.ExpectMixins.toBe(js.expect.E.expect(new sahara_animal()),"The Addax");
+			js.expect.ExpectMixins.toBe(js.expect.E.expect(sahara_animal),"The Addax");
 		});
 	}
 	,step4: function() {
@@ -75,15 +95,23 @@ HundredSpecs.prototype = {
 		js.mocha.M.it("should have 8 items",function() {
 			js.expect.E.expect(planets.length).to.eql(8);
 		});
+		var lowercase_planets_0 = "mercury";
+		var lowercase_planets_1 = "venus";
+		var lowercase_planets_2 = "earth";
+		var lowercase_planets_3 = "mars";
+		var lowercase_planets_4 = "jupiter";
+		var lowercase_planets_5 = "saturn";
+		var lowercase_planets_6 = "uranus";
+		var lowercase_planets_7 = "neptune";
 		js.mocha.M.it("should contain the name of each of our solar system's planets",function() {
-			js.expect.E.expect(planets.toLowerCase()).to.contain("mercury");
-			js.expect.E.expect(planets.toLowerCase()).to.contain("venus");
-			js.expect.E.expect(planets.toLowerCase()).to.contain("earth");
-			js.expect.E.expect(planets.toLowerCase()).to.contain("mars");
-			js.expect.E.expect(planets.toLowerCase()).to.contain("jupiter");
-			js.expect.E.expect(planets.toLowerCase()).to.contain("saturn");
-			js.expect.E.expect(planets.toLowerCase()).to.contain("uranus");
-			js.expect.E.expect(planets.toLowerCase()).to.contain("neptune");
+			js.expect.E.expect(lowercase_planets_0).to.eql(planets[0]);
+			js.expect.E.expect(lowercase_planets_1).to.eql(planets[1]);
+			js.expect.E.expect(lowercase_planets_2).to.eql(planets[2]);
+			js.expect.E.expect(lowercase_planets_3).to.eql(planets[3]);
+			js.expect.E.expect(lowercase_planets_4).to.eql(planets[4]);
+			js.expect.E.expect(lowercase_planets_5).to.eql(planets[5]);
+			js.expect.E.expect(lowercase_planets_6).to.eql(planets[6]);
+			js.expect.E.expect(lowercase_planets_7).to.eql(planets[7]);
 		});
 		js.mocha.M.it("should have each planet listed in order",function() {
 			js.expect.E.expect(planets[0].toLowerCase()).to.eql("mercury");
@@ -167,29 +195,6 @@ HundredSpecs.prototype = {
 			js.expect.E.expect(domains["jsonformatter.curiousconcept.com"]).to.eql("104.28.5.70");
 		});
 	}
-	,step13: function() {
-		js.mocha.M.it("should declare a literal object named 'rainbow'",function() {
-			js.expect.ExpectMixins.toBe(js.expect.E.expect(rainbow).not,null);
-		});
-		js.mocha.M.it("should have 2 properties",function() {
-			js.expect.E.expect(Reflect.fields(rainbow)).to.have.length(8);
-		});
-		js.mocha.M.it("colors should have 7 properties",function() {
-			js.expect.E.expect(Reflect.fields(rainbow.colors)).to.have.length(7);
-		});
-		js.mocha.M.it("colors should define 7 colors in hexadecimal format",function() {
-			js.expect.E.expect(rainbow.colors.red).to.eql("#F0280A");
-			js.expect.E.expect(rainbow.colors.orange).to.eql("#FF8800");
-			js.expect.E.expect(rainbow.colors.yellow).to.eql("#FFDD00");
-			js.expect.E.expect(rainbow.colors.green).to.eql("#51AB0C");
-			js.expect.E.expect(rainbow.colors.blue).to.eql("#1593ED");
-			js.expect.E.expect(rainbow.colors.indigo).to.eql("#5215ED");
-			js.expect.E.expect(rainbow.colors.violet).to.eql("#A915ED");
-		});
-		js.mocha.M.it("should be a double rainbow",function() {
-			js.expect.E.expect(Reflect.fields(rainbow.isDouble)).to.be.ok();
-		});
-	}
 	,step12: function() {
 		js.mocha.M.it("should declare a literal object named 'browsers'",function() {
 			js.expect.ExpectMixins.toBe(js.expect.E.expect(browsers).not,null);
@@ -206,6 +211,29 @@ HundredSpecs.prototype = {
 			js.expect.E.expect(browsers.Sleipnir).to.eql("fenrir");
 			js.expect.E.expect(browsers.Konqueror).to.eql("KDE");
 			js.expect.E.expect(browsers.Links).to.eql("GPLv2+");
+		});
+	}
+	,step13: function() {
+		js.mocha.M.it("should declare a literal object named 'rainbow'",function() {
+			js.expect.ExpectMixins.toBe(js.expect.E.expect(rainbow).not,null);
+		});
+		js.mocha.M.it("should have 2 properties",function() {
+			js.expect.E.expect(Reflect.fields(rainbow)).to.have.length(2);
+		});
+		js.mocha.M.it("colors should have 7 properties",function() {
+			js.expect.E.expect(Reflect.fields(rainbow.colors)).to.have.length(7);
+		});
+		js.mocha.M.it("colors should define 7 colors in hexadecimal format",function() {
+			js.expect.E.expect(rainbow.colors.red).to.eql("#F0280A");
+			js.expect.E.expect(rainbow.colors.orange).to.eql("#FF8800");
+			js.expect.E.expect(rainbow.colors.yellow).to.eql("#FFDD00");
+			js.expect.E.expect(rainbow.colors.green).to.eql("#51AB0C");
+			js.expect.E.expect(rainbow.colors.blue).to.eql("#1593ED");
+			js.expect.E.expect(rainbow.colors.indigo).to.eql("#5215ED");
+			js.expect.E.expect(rainbow.colors.violet).to.eql("#A915ED");
+		});
+		js.mocha.M.it("should be a double rainbow",function() {
+			js.expect.E.expect(Reflect.fields(rainbow.isDouble)).to.be.ok();
 		});
 	}
 	,step20: function() {
@@ -495,6 +523,228 @@ HundredSpecs.prototype = {
 			js.expect.E.expect(dinner.foods).to.contain("fish");
 			js.expect.E.expect(dinner.foods).to.contain("vegetables");
 			js.expect.E.expect(dinner.foods.length).to.be.above(1);
+		});
+	}
+	,step81: function() {
+		var dory = new Animal('Fish', 'female');
+		js.mocha.M.it("isWarmBlooded should be a function.",function() {
+			js.expect.E.expect(dory.isWarmBlooded).to.be.a("function");
+		});
+		js.mocha.M.it("'Monkey' and 'Bird' should return true.",function() {
+			js.expect.E.expect(new Animal('Monkey', 'male').isWarmBlooded()).to.equal(true);
+			js.expect.E.expect(new Animal('Bird', 'female').isWarmBlooded()).to.equal(true);
+		});
+		js.mocha.M.it("'Fish' should return false.",function() {
+			js.expect.E.expect(dory.isWarmBlooded()).to.equal(false);
+		});
+		js.mocha.M.it("any other species should return 'Could not determine if warm-blooded'.",function() {
+			js.expect.E.expect(new Animal('Cat', 'male').isWarmBlooded()).to.equal("Could not determine if warm-blooded");
+		});
+	}
+	,step82: function() {
+		var cruiser = new Vehicle('Toyota', 'FJ Cruiser');
+		js.mocha.M.it("drive should be a function.",function() {
+			js.expect.E.expect(cruiser.drive).to.be.a("function");
+		});
+		js.mocha.M.it("should return 'Driving on {streetName}' if param is a string and not empty",function() {
+			js.expect.E.expect(cruiser.drive("University Avenue")).to.equal("Driving on University Avenue");
+		});
+		js.mocha.M.it("should return 'Driving forward' if param is not a string and/or is empty",function() {
+			js.expect.E.expect(cruiser.drive("")).to.equal("Driving forward");
+			js.expect.E.expect(cruiser.drive(null)).to.equal("Driving forward");
+		});
+	}
+	,step83: function() {
+		var heptagon = new Shape(7);
+		js.mocha.M.it("getType should be a function.",function() {
+			js.expect.E.expect(heptagon.getType).to.be.a("function");
+		});
+		js.mocha.M.it("should return the correct types for sides 3 to 10.",function() {
+			js.expect.E.expect(new Shape(3).getType()).to.equal("triangle");
+			js.expect.E.expect(new Shape(4).getType()).to.equal("quadrilateral");
+			js.expect.E.expect(new Shape(5).getType()).to.equal("pentagon");
+			js.expect.E.expect(new Shape(6).getType()).to.equal("hexagon");
+			js.expect.E.expect(new Shape(7).getType()).to.equal("heptagon");
+			js.expect.E.expect(new Shape(8).getType()).to.equal("octagon");
+			js.expect.E.expect(new Shape(9).getType()).to.equal("nonagon");
+			js.expect.E.expect(new Shape(10).getType()).to.equal("decagon");
+		});
+		js.mocha.M.it("should return 'Could not determine type' for any other number of sides.",function() {
+			js.expect.E.expect(new Shape(11).getType()).to.equal("Could not determine type");
+		});
+	}
+	,step84: function() {
+		var garfieldBox = new Box(new Animal('Cat', 'male'), false);
+		js.mocha.M.it("openBox should be a function.",function() {
+			js.expect.E.expect(garfieldBox.openBox).to.be.a("function");
+		});
+		js.mocha.M.it("should open the box if it is closed.",function() {
+			js.expect.E.expect(garfieldBox.openBox()).to.equal(true);
+			js.expect.E.expect(garfieldBox.isOpen).to.equal(true);
+		});
+		js.mocha.M.it("should not close the box if it is open.",function() {
+			js.expect.E.expect(garfieldBox.openBox()).to.equal(false);
+			js.expect.E.expect(garfieldBox.isOpen).to.equal(true);
+		});
+	}
+	,step85: function() {
+		var door = new Door(false);
+		js.mocha.M.it("openClose should be a function.",function() {
+			js.expect.E.expect(door.openClose).to.be.a("function");
+		});
+		js.mocha.M.it("should open the door if it is closed.",function() {
+			js.expect.E.expect(door.openClose()).to.equal(true);
+			js.expect.E.expect(door.isOpen).to.equal(true);
+		});
+		js.mocha.M.it("should close the door if it is open.",function() {
+			js.expect.E.expect(door.openClose()).to.equal(false);
+			js.expect.E.expect(door.isOpen).to.equal(false);
+		});
+	}
+	,step86: function() {
+		var shoes = new Shoe(7, 'silver');
+		js.mocha.M.it("findShoes should be a function.",function() {
+			js.expect.E.expect(shoes.findShoes).to.be.a("function");
+		});
+		js.mocha.M.it("should return 'Found {color} shoes of size {size}'.",function() {
+			js.expect.E.expect(shoes.findShoes()).to.equal("Found silver shoes of size 7");
+		});
+	}
+	,step87: function() {
+		var house = new House(3);
+		js.mocha.M.it("isATallStory should be a function.",function() {
+			js.expect.E.expect(house.isATallStory).to.be.a("function");
+		});
+		js.mocha.M.it("should return true if stories is greater than or equal to storiesTooTall.",function() {
+			js.expect.E.expect(house.isATallStory(3)).to.equal(true);
+			js.expect.E.expect(house.isATallStory(2)).to.equal(true);
+		});
+		js.mocha.M.it("should return false if stories is less than storiesTooTall.",function() {
+			js.expect.E.expect(house.isATallStory(4)).to.equal(false);
+		});
+	}
+	,step88: function() {
+		var light = new Lightbulb(false);
+		js.mocha.M.it("flipSwitch should be a function.",function() {
+			js.expect.E.expect(light.flipSwitch).to.be.a("function");
+		});
+		js.mocha.M.it("should flip the switch on if 'on' is passed in as a param.",function() {
+			js.expect.E.expect(light.flipSwitch("on")).to.equal(true);
+			js.expect.E.expect(light.isOn).to.equal(true);
+		});
+		js.mocha.M.it("should flip the switch off if anything other than 'on' is passed in.",function() {
+			js.expect.E.expect(light.flipSwitch("off")).to.equal(false);
+			js.expect.E.expect(light.isOn).to.equal(false);
+		});
+	}
+	,step89: function() {
+		var chocoCookie = new Cookie('chocolate');
+		js.mocha.M.it("swipedByCookieMonster should be a function.",function() {
+			js.expect.E.expect(chocoCookie.swipedByCookieMonster).to.be.a("function");
+		});
+		js.mocha.M.it("should return true if the flavor is 'chocolate' and the day of the week is 'Monday'.",function() {
+			js.expect.E.expect(chocoCookie.swipedByCookieMonster("Monday")).to.equal(true);
+		});
+		js.mocha.M.it("should return false if the flavor is not 'chocolate' and/or the day of the week is not 'Monday'.",function() {
+			js.expect.E.expect(chocoCookie.swipedByCookieMonster("Saturday")).to.equal(false);
+			js.expect.E.expect(new Cookie('Oreo').swipedByCookieMonster("Monday")).to.equal(false);
+			js.expect.E.expect(new Cookie('sugar').swipedByCookieMonster("Sunday")).to.equal(false);
+		});
+	}
+	,step90: function() {
+		var dishes = new Meal(['pizza', 'pie', 'fish', 'shrimp', 'pasta']);
+		var snacks = new Meal(['ice cream', 'chips', 'salad']);
+		js.mocha.M.it("containsJunkFood should be a function.",function() {
+			js.expect.E.expect(dishes.containsJunkFood).to.be.a("function");
+		});
+		js.mocha.M.it("should return true if foods array contains at least one of the junk foods.",function() {
+			js.expect.E.expect(snacks.containsJunkFood()).to.equal(true);
+		});
+		js.mocha.M.it("should return false if foods array does not contain any junk food item.",function() {
+			js.expect.E.expect(dishes.containsJunkFood()).to.equal(false);
+		});
+	}
+	,step91: function() {
+		js.mocha.M.it("'warmBloodedAnimal' should be warm-blooded",function() {
+			js.expect.E.expect(warmBloodedAnimal).to.equal(true);
+		});
+		js.mocha.M.it("'coldBloodedAnimal' should not be warm-blooded",function() {
+			js.expect.E.expect(coldBloodedAnimal).to.equal(false);
+		});
+		js.mocha.M.it("'notWarmOrColdAnimal' should not be warm- or cold-blooded",function() {
+			js.expect.E.expect(notWarmOrColdAnimal).to.equal("Could not determine if warm-blooded");
+		});
+	}
+	,step92: function() {
+		js.mocha.M.it("'streetDriving' should contain 'Driving on {streetName}'",function() {
+			js.expect.E.expect(streetDriving).to.contain("Driving on ");
+		});
+		js.mocha.M.it("'forwardDriving' should contain 'Driving forward'",function() {
+			js.expect.E.expect(forwardDriving).to.equal("Driving forward");
+		});
+	}
+	,step93: function() {
+		js.mocha.M.it("'decagon' should be a decagon",function() {
+			js.expect.E.expect(decagon).to.equal("decagon");
+		});
+		js.mocha.M.it("'polygon' should contain 'Could not determine type'",function() {
+			js.expect.E.expect(polygon).to.equal("Could not determine type");
+		});
+	}
+	,step94: function() {
+		js.mocha.M.it("'openAClosedBox' should open the box",function() {
+			js.expect.E.expect(openAClosedBox).to.equal(true);
+		});
+		js.mocha.M.it("'closeAnOpenBox' should not close the box",function() {
+			js.expect.E.expect(closeAnOpenBox).to.equal(false);
+		});
+	}
+	,step95: function() {
+		js.mocha.M.it("'openAClosedDoor' should open the door",function() {
+			js.expect.E.expect(openAClosedDoor).to.equal(true);
+		});
+		js.mocha.M.it("'closeAnOpenDoor' should close the door",function() {
+			js.expect.E.expect(closeAnOpenDoor).to.equal(false);
+		});
+	}
+	,step96: function() {
+		js.mocha.M.it("'redShoesSize7' should contain 'Found red shoes of size 7'",function() {
+			js.expect.E.expect(redShoesSize7).to.equal("Found red shoes of size 7");
+		});
+		js.mocha.M.it("'blackShoesSize10' should contain 'Found black shoes of size 10'",function() {
+			js.expect.E.expect(blackShoesSize10).to.equal("Found black shoes of size 10");
+		});
+	}
+	,step97: function() {
+		js.mocha.M.it("'farTooTallAStory' should be a tall story",function() {
+			js.expect.E.expect(farTooTallAStory).to.equal(true);
+		});
+		js.mocha.M.it("'shortStory' should be a short story",function() {
+			js.expect.E.expect(shortStory).to.equal(false);
+		});
+	}
+	,step98: function() {
+		js.mocha.M.it("'kitchenLightsOn' should be switched on",function() {
+			js.expect.E.expect(kitchenLightsOn).to.equal(true);
+		});
+		js.mocha.M.it("'porchLightsOff' should be switched off",function() {
+			js.expect.E.expect(porchLightsOff).to.equal(false);
+		});
+	}
+	,step99: function() {
+		js.mocha.M.it("'cookieMonsterPwns' means the Cookie Monster stole your cookies",function() {
+			js.expect.E.expect(cookieMonsterPwns).to.equal(true);
+		});
+		js.mocha.M.it("'cookieMonsterBlocked' means the Cookie Monster missed his chance",function() {
+			js.expect.E.expect(cookieMonsterBlocked).to.equal(false);
+		});
+	}
+	,step100: function() {
+		js.mocha.M.it("'badForYou' should contain at least one junk food item",function() {
+			js.expect.E.expect(badForYou).to.equal(true);
+		});
+		js.mocha.M.it("'goodForYou' should only contain healthy food items",function() {
+			js.expect.E.expect(goodForYou).to.equal(false);
 		});
 	}
 };
