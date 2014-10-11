@@ -3,7 +3,7 @@
  * Declare a variable named "unicorn"
  *
  */
-var unicorn;
+
 
 /* Step 2
  *
@@ -11,7 +11,6 @@ var unicorn;
  * then assign the value of phone to "Atari"
  *
  */
- var videogame_system = "Atari";
 
 
 /* Step 3
@@ -20,7 +19,7 @@ var unicorn;
  * and assign the value of sahara_animal to "The Addax"
  *
  */
-var sahara_animal = "The Addax";
+
 
 /* Step 4
  *
@@ -29,7 +28,6 @@ var sahara_animal = "The Addax";
  * each planet in our solar system
  *
  */
- var planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune'];
 
 
 
@@ -40,7 +38,7 @@ var sahara_animal = "The Addax";
  * each galilean moon of Jupiter
  *
  */
-var galilean_moons = ['io','Europa','Ganymede','Callisto'];
+
 
 
 /* Step 6 φ
@@ -49,7 +47,6 @@ var galilean_moons = ['io','Europa','Ganymede','Callisto'];
  * and assign the value of golden_ratio to 1.61803398874
  *
  */
-var golden_ratio = 1.61803398874;
 
 
 
@@ -60,7 +57,7 @@ var golden_ratio = 1.61803398874;
  *
  */
 
-var earths_water_composition = 0.71;
+
 /* Step 8
  *
  * Declare a variable named "club_name"
@@ -68,7 +65,7 @@ var earths_water_composition = 0.71;
  *
  */
 
-var club_name = "Fight Club";
+
 
 /* Step 9
  *
@@ -80,11 +77,7 @@ var club_name = "Fight Club";
  *   unknown => undefined
  */
 
-var Gender = {
-	female : "female",
-	male : "male",
-	unknown : undefined
-};
+
 
 /* Step 10
  *
@@ -97,14 +90,7 @@ var Gender = {
  *   age     => 20
  *   gender  => Gender.female
  * 
- */	
- var princess_leia = {
- 	name : "Leia Organa",
- 	money : 890,
- 	age : 20,
- 	gender : Gender.female
- 	};
- 
+ */
 
 
 
@@ -121,13 +107,7 @@ var Gender = {
  * 
  */
 
-var domains = {
-	"ycombinator.com"                  : "198.41.190.47",
-    "laughingsquid.com"                : "162.159.247.97",
-    "slumlordhosting.com"              : "198.61.179.126",
-    "jsonformatter.curiousconcept.com" : "104.28.5.70"
 
-};
 
 
 /* Step 12
@@ -145,22 +125,13 @@ var domains = {
  *   Links      => "GPLv2+"
  * 
  */
-var browsers = {
-	Chrome     : "google",
-    Chromium   : "google",
-    Safari     : "apple",
-    Opera      : "opera",
-    Firefox    : "mozilla",
-    Sleipnir   : "fenrir",
-    Konqueror  : "KDE",
-    Links      : "GPLv2+"
-};
+
 
 
 
 /* Step 13
- 
-  * Define a literal object named "rainbow"
+ *
+ * Define a literal object named "rainbow"
  * with properties and values set to:
  *
  *  colors    => [LITERAL OBJECT]
@@ -175,20 +146,7 @@ var browsers = {
  *
  */
 
-var rainbow = {
-		colors : {
 
-                   red       : "#F0280A",
-                   orange    : "#FF8800",
-                   yellow    : "#FFDD00",
-                   green     : "#51AB0C",
-                   blue      : "#1593ED",
-                   indigo    : "#5215ED",
-                   violet    : "#A915ED",
-		},
-    	isDouble : true
-	
-};
 
 /* Step 14
  *
@@ -292,9 +250,7 @@ var rainbow = {
  * @return {String}
  *
  */
-function sahara_river(){
-	return 'Nile River';
-};
+
 
 /* Step 21
  *
@@ -502,16 +458,11 @@ function sahara_river(){
  */
 
 /* Step 50
- *	
+ *
  * Define a Class
  *
  */
-function Animal(species,gender){
-	this.species = species;
-	this.gender = gender;
 
-
-};
 /**
  * Animal class
  * @param {string} species The animal species
@@ -523,136 +474,94 @@ function Animal(species,gender){
  * @param {string} make The vehicle's make
  * @param {string} model The vehicle's model
  */
-function Vehicle(make,model){
-	this.make = make;
-	this.model = model;
-};
+
 /**
  * Shape class
  * @param {number} sides The number of sides, should be greater than 3
  */
-function Shape(sides){
-this.sides = sides;
 
-};
 /**
  * Box class
  * @param {anything} contents The contents of the box
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
-function Box(contents,isOpen){
-	this.contents = contents;
-	this.isOpen = isOpen;
-}
+
 /**
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
-function Door (isOpen){
-this.isOpen = isOpen;
-}
+
 /**
  * Shoe class
  * @param {number} size  The shoe size
  * @param {string} color The shoe color
  */
-function Shoe (size,color){
-	this.size = size;
-	this.color = color;
-}
+
 /**
  * House class
  * @param {number} stories How many stories tall the house is
  */
-function House (stories){
-this.stories = stories;
 
-};
 /**
  * Lightbulb class
  * @param {boolean} isOn Whether the light is on or off
  */
-function Lightbulb (isOn){
-	this.isOn = isOn;
-};
+
 /**
  * Cookie class
  * @param {string} flavor The cookie's flavor
  */
-function Cookie (flavor){
-this.flavor = flavor;
-};
+
 /**
  * Meal class
  * @param {Array} foods All the foods in the meal
  */
-function Meal (foods){
-	this.foods = foods;
-};
+
 /* Step 60
  *
  * Create a new instance of
  *
  */
 
-
 // Create 2 different species of animals
-var george = new Animal();
-
-	george.species = 'Monkey';
-	george.gender = 'male';
-
-var nemo = new Animal();
-	nemo.species = 'Fish';
-	nemo.gender ='male';
-
-
-
+var george;
+var nemo;
 
 // Create 2 different vehicles
-var civic = new Vehicle();
-	civic.make = 'Honda';
-	civic.model = 'Civic';
-var forte = new Vehicle();
-	forte.make = 'KIA';
-	forte.model = 'Forte';
+var civic;
+var forte;
 
 // Create 2 shapes with different numbers of sides
-var square = new Shape();
-	square.sides = 4;
+var square;
+var hexagon;
 
-var hexagon = new Shape();
-	hexagon.sides = 6;
-	
 // Create 2 boxes
-var cat = new Animal('Cat');
-var catBox = new Box(cat, true);
-
-var christmasPresent = new Box(cat,false);
+var catBox;
+var christmasPresent;
 
 // Create 2 doors
-var automaticDoor = new Door(true);
-var bankVault = new Door(false);
+var automaticDoor;
+var bankVault;
 
 // Create 2 shoes
-var rubySlippers = new Shoe(7,'red');
-var dressShoes = new Shoe(10,'black');
+var rubySlippers;
+var dressShoes;
 
 // Create 2 houses
-var singleStory = new House(1);
-var twoStory = new House(2);
+var singleStory;
+var twoStory;
 
 // Create 2 lightbulbs
-var incandescent = new Lightbulb(true);
-var halogen = new Lightbulb(false);
+var incandescent;
+var halogen;
 
 // Create 2 cookies of different flavors
-var chocolateChip = new Cookie('chocolate');
-var gingerbread = new Cookie('gingerbread');
+var chocolateChip;
+var gingerbread;
 
 // Create 2 different meals
-var breakfast = new Meal('cereal and milk');
-var dinner = new Meal('fish and vegetables');
+var breakfast;
+var dinner;
 
 /* Step 80
  *
@@ -666,4 +575,3 @@ var dinner = new Meal('fish and vegetables');
  * Call
  *
  */
-1
