@@ -523,7 +523,8 @@ function Vehicle(make,model){
  * Shape class
  * @param {number} sides The number of sides, should be greater than 3
  */
-function Shape(number){
+function Shape(sides,number){
+  this.sides = sides;
 	this.number = number;
 }
 /**
@@ -533,14 +534,15 @@ function Shape(number){
  */
 function Box(contents,isOpen){
 	this.contents = contents;
-	this.isOpen = isOpen;
-}
+  this.isOpen = isOpen;
+  }
+
 /**
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
 function Door(isOpen){
-	this.isOpen = isOpen
+	this.isOpen = isOpen;
 }
 /**
  * Shoe class
@@ -563,7 +565,7 @@ function House(stories){
  * @param {boolean} isOn Whether the light is on or off
  */
 function Lightbulb(isOn){
-	this.isOn;
+	this.isOn = isOn;
 }
 /**
  * Cookie class
@@ -586,44 +588,89 @@ function Meal(foods){
  */
 
 // Create 2 different species of animals
-var george;
-var nemo;
+var george = new Animal;
+george.species = 'Monkey';
+george.gender = "male" ;
+var nemo = new Animal;
+nemo.species = 'Fish';
+nemo.gender = "male";
+
 
 // Create 2 different vehicles
-var civic;
-var forte;
-
+var civic = new Vehicle;
+civic.make = 'Honda';
+civic.model = 'Civic';
+var forte = new Vehicle;
+forte.make = 'KIA';
+forte.model = 'Forte';
 // Create 2 shapes with different numbers of sides
-var square;
-var hexagon;
+var square = new Shape;
+square.sides = 4;
+var hexagon = new Shape;
+hexagon.sides = 6;
+
 
 // Create 2 boxes
-var catBox;
-var christmasPresent;
+var catBox = new Box;
+var cat = new Animal;
+cat.species = 'Cat'
+catBox.contents = cat;
+
+catBox.isOpen = true;
+
+var christmasPresent = new Box;
+christmasPresent.contents = 'presents';
+
+christmasPresent.isOpen = false;
+
 
 // Create 2 doors
-var automaticDoor;
-var bankVault;
+var automaticDoor = new Door;
+automaticDoor.isOpen = true;
+
+var bankVault = new Door;
+bankVault.isOpen = false;
 
 // Create 2 shoes
-var rubySlippers;
-var dressShoes;
+var rubySlippers = new Shoe;
+rubySlippers.size = 7;
+rubySlippers.color = 'red';
+
+var dressShoes = new Shoe;
+dressShoes.size = 10;
+dressShoes.color = 'black';
+
 
 // Create 2 houses
-var singleStory;
-var twoStory;
+var singleStory = new House;
+singleStory.stories = 1;
+
+var twoStory = new House;
+twoStory.stories = 2;
+
 
 // Create 2 lightbulbs
-var incandescent;
-var halogen;
+var incandescent = new Lightbulb;
+incandescent.isOn = true;
+
+var halogen = new Lightbulb;
+halogen.isOn = false;
 
 // Create 2 cookies of different flavors
-var chocolateChip;
-var gingerbread;
+var chocolateChip = new Cookie;
+chocolateChip.flavor = 'chocolate';
+
+var gingerbread = new Cookie;
+gingerbread.flavor = 'gingerbread';
 
 // Create 2 different meals
-var breakfast;
-var dinner;
+var breakfast = new Meal;
+breakfast.foods = 'cereal and milk';
+
+var dinner = new Meal;
+dinner.foods = 'fish and vegetables';
+
+
 
 
  /* Steps 81 to 90
@@ -647,6 +694,18 @@ var dinner;
  *       Any other species => "Could not determine if warm-blooded"
  *
  */
+  Animal.prototype.isWarmBlooded = function() {
+    if (this.species === "Monkey" || this.species === "Bird"){
+      return true;
+    }
+    else if (this.species === "Fish"){
+      return false;
+    }
+    else {
+      return "Could not determine if warm-blooded"
+    }
+  }
+
 
 
 /* Step 82
@@ -656,9 +715,18 @@ var dinner;
  * return "Driving on {streetName}", else return "Driving forward".
  *
  */
+  Vehicle.prototype.drive = function(streetName) {
+    if (streetName === "" || typeof streetName !== "string"){
+      return "Driving forward";
+    }
+      else { 
+        return "Driving on " + streetName; 
+      }
+    }
 
 
- /* Step 83
+
+      /*(Step 83
  *
  * Declare a Shape method called getType that returns a string
  * containing the type of shape based on the sides property.
@@ -675,7 +743,36 @@ var dinner;
  * Any other number => "Could not determine type"
  *
  */
-
+  Shape.prototype.getType = function(sides){
+    switch (this.sides) {
+    case 3:
+      return "triangle";
+      break;
+    case 4:
+      return "quadrilateral";
+      break;
+    case 5:
+      return "pentagon";
+      break;
+    case 6:
+      return "hexagon";
+      break;
+    case 7:
+      return "heptagon";
+      break;
+    case 8:
+      return "octagon";
+      break;
+     case 9 :
+      return "nonagon";
+      break;
+     case 10:
+      return "decagon";
+      break;
+     default:
+      return "Could not determine type";
+    }
+  };
 
 /* Step 84
  *
@@ -685,6 +782,15 @@ var dinner;
  * Return true if openBox opens the box, false otherwise.
  *
  */
+Box.prototype.openBox = function(){
+  if (this.isOpen === false){
+    this.isOpen = true;
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 
 
  /* Step 85
