@@ -800,7 +800,16 @@ Box.prototype.openBox = function(){
  * Return true if openClose opens the door, false if openClose closes the door.
  *
  */
-
+ Door.prototype.openClose = function(){
+  if (this.isOpen === false){
+    this.isOpen = true;
+    return true;
+  }
+  else if (this.isOpen === true){
+      this.isOpen = false;
+      return false;
+  }
+ }
 
 /* Step 86
  *
@@ -808,7 +817,9 @@ Box.prototype.openBox = function(){
  * the color and size of the shoe ("Found red shoes of size 8").
  *
  */
-
+Shoe.prototype.findShoes = function(size,color){
+  return "Found " + this.color + " shoes of size " + this.size;
+}
 
  /* Step 87
  *
@@ -818,7 +829,14 @@ Box.prototype.openBox = function(){
  * storiesTooTall, return true, else return false.
  *
  */
-
+House.prototype.isATallStory = function(storiesTooTall){
+  if(this.stories >= storiesTooTall){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 
  /* Step 88
  *
@@ -829,7 +847,19 @@ Box.prototype.openBox = function(){
  * Return true if isOn is true, false otherwise.
  *
  */
-
+Lightbulb.prototype.flipSwitch = function(on){
+  if (on == "on"){ 
+    this.isOn = true;
+    return true;
+  }
+  else if (typeof on === "string") {
+    this.isOn = false;
+    return false;
+  }
+  else {
+    return false;
+  }
+}
 
  /* Step 89
  *
@@ -838,6 +868,14 @@ Box.prototype.openBox = function(){
  * and the dayOfTheWeek is "Monday", return true.  Else return false.
  *
  */
+Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek) {
+  if (this.flavor === "chocolate" && dayOfTheWeek === "Monday"){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
 
 
  /* Step 90
@@ -853,7 +891,15 @@ Box.prototype.openBox = function(){
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
  *
  */
-
+Meal.prototype.containsJunkFood = function(){
+  var junkFood = ["chips", "soda", "ice cream", "popcorn","candy"];
+  for (var i = 0; i < junkFood.length; i++) {
+    if(this.foods.indexOf(junkFood[i]) >=0){
+      return true;
+    }
+  }
+  return false;
+};
 
  /* Steps 91 to 100
  *
@@ -868,9 +914,10 @@ Box.prototype.openBox = function(){
  * and assign the values to each variable below.
  *
  */
-var warmBloodedAnimal;
-var coldBloodedAnimal;
-var notWarmOrColdAnimal;
+var warmBloodedAnimal = new Animal();
+this.warmBloodedAnimal.isWarmBlooded.call(true);
+var coldBloodedAnimal = new Animal
+var notWarmOrColdAnimal = new Animal
 
 
 /* Step 92
