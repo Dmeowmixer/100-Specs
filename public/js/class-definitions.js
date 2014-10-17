@@ -695,7 +695,7 @@ dinner.foods = 'fish and vegetables';
  *
  */
   Animal.prototype.isWarmBlooded = function() {
-    if (this.species === "Monkey" || this.species === "Bird"){
+    if (this.species === "Monkey" || this.species === "Bird" || this.species.isWarmBlooded === true){
       return true;
     }
     else if (this.species === "Fish"){
@@ -915,10 +915,12 @@ Meal.prototype.containsJunkFood = function(){
  *
  */
 var warmBloodedAnimal = new Animal();
-this.warmBloodedAnimal.isWarmBlooded.call(true);
-var coldBloodedAnimal = new Animal
-var notWarmOrColdAnimal = new Animal
-
+  this.warmBloodedAnimal = true;
+var coldBloodedAnimal = new Animal();
+  this.coldBloodedAnimal = false;
+var notWarmOrColdAnimal = new Animal();
+  this.notWarmOrColdAnimal = "Could not determine if warm-blooded";
+  
 
 /* Step 92
  *
@@ -926,8 +928,10 @@ var notWarmOrColdAnimal = new Animal
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = new Vehicle();
+  this.streetDriving = drive("");
+var forwardDriving = new Vehicle();
+  this.forwardDriving = drive("");
 
 
  /* Step 93
